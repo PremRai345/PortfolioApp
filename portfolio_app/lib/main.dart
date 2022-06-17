@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -157,10 +158,13 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 60),
-              const Text(
-                'Made By Prem',
-                style: TextStyle(fontSize: 15, color: Colors.white),
-              ),
+              AnimatedTextKit(animatedTexts: [
+                FadeAnimatedText('Made with ❤️ by Prem',
+                    textStyle: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white)),
+              ])
             ],
           ),
         ),
