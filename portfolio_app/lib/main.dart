@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  // It will disable the landscape mode
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: HomeScreen(),
+
+      //This will remove the debug banner
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
@@ -36,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Jack Rai',
+                        'Prem Kumar Rai',
                         style: TextStyle(
                             fontSize: 28,
                             color: Colors.white,
@@ -62,13 +69,14 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: const [
                         Icon(Icons.school_outlined,
-                            size: 41, color: Colors.white),
-                        SizedBox(width: 26),
+                            size: 38, color: Colors.white),
+                        SizedBox(width: 18),
                         Text(
-                          'School Name',
+                          'University of Wolverhampton',
                           style: TextStyle(
-                            fontSize: 26,
+                            fontSize: 18,
                             color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -77,12 +85,13 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: const [
                         Icon(Icons.computer_outlined,
-                            size: 41, color: Colors.white),
+                            size: 38, color: Colors.white),
                         SizedBox(width: 26),
                         Text(
-                          'School Name',
+                          'Computer Science',
                           style: TextStyle(
-                            fontSize: 26,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
                         ),
@@ -92,13 +101,14 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: const [
                         Icon(Icons.location_on_outlined,
-                            size: 41, color: Colors.white),
-                        SizedBox(width: 26),
+                            size: 38, color: Colors.white),
+                        SizedBox(width: 18),
                         Text(
-                          'School Name',
+                          'Nepal',
                           style: TextStyle(
-                            fontSize: 26,
+                            fontSize: 18,
                             color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
@@ -107,11 +117,15 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: const [
                         Icon(Icons.email_outlined,
-                            size: 41, color: Colors.white),
-                        SizedBox(width: 26),
+                            size: 38, color: Colors.white),
+                        SizedBox(width: 18),
                         Text(
-                          'School Name',
-                          style: TextStyle(fontSize: 26, color: Colors.white),
+                          'abc@gmail.com',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
@@ -119,11 +133,15 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: const [
                         Icon(Icons.phone_android_outlined,
-                            size: 41, color: Colors.white),
-                        SizedBox(width: 26),
+                            size: 38, color: Colors.white),
+                        SizedBox(width: 18),
                         Text(
-                          'School Name',
-                          style: TextStyle(fontSize: 26, color: Colors.white),
+                          '+9771234567891',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),
@@ -134,8 +152,8 @@ class HomeScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.all(19.0),
                 child: Text(
-                  'Hello my name is Jack and this is my portfolio app.',
-                  style: TextStyle(fontSize: 21, color: Colors.white),
+                  'Hello my name is Prem and this is my portfolio app. I have done my undergraduate in Computer Science and planning to do Msc in Digital Marketing.',
+                  style: TextStyle(fontSize: 19, color: Colors.white),
                 ),
               ),
               const SizedBox(height: 60),
